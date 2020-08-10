@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Stories</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./assets/css/story.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="stories-wrapper">
+	<div class="warning-message">This is the best place to visit.</div>
+	<div class="success-message">👍</div>
+	<section class="stories">
+	</section>
+</div>
+
+<div class="feed">
+	<div class="feed__cover"></div>
+	<div class="header"></div>
+	<div class="story-bar"></div>
+	<div class="feed__content">
+		<div>To view again.<br />Reload the page.</div>
+		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 61.25" version="1.1" x="0px" y="0px" class="reload-icon">
+			<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+				<g transform="translate(-2335.000000, -172.000000)">
+					<g transform="translate(2337.000000, 175.000000)">
+						<path class="reload-icon-shape" d="M42.4025258,14.0548956 C39.3738552,5.85011558 31.4833658,0 22.2265086,0 C10.3523865,0 0.726508638,9.62587788 0.726508638,21.5 C0.726508638,33.3741221 10.3523865,43 22.2265086,43 L22.2265086,43 C31.7524181,43 39.8313782,36.8048728 42.6542051,28.223802" stroke="#000000" stroke-width="4"/>
+						<polygon fill="#000000" transform="translate(42.654205, 15.000000) scale(1, -1) rotate(-63.000000) translate(-42.654205, -15.000000) " points="37.6557116 23.2109081 37.6557116 6.79136002 48.3960608 15.0011341"/>
+					</g>
+				</g>
+			</g>
+			<!-- Created by Kevin from the Noun Project -->
+		</svg>
+	</div>
+	<div class="tab-bar"></div>
+</div>
+
+<script type="text/template" id="story-template">
+	<article class="story" id="story-<%- index %>" data-story-id="<%- index %>">
+		<div class="story__cover"></div>
+		<div class="story__top">
+			<div class="story__details">
+				<div class="story__avatar" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9332/<%- user %>.jpg)"></div>
+				<div class="story__user"><%- user %></div>
+				<div class="story__time"><%- time %></div>
+			</div>
+		</div>
+		<div class="story__bottom">
+			<button class="story__send-button">Send Message</button>
+		</div>
+		<% if (isIOS) { %>
+    		<div class="story__image" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9332/<%- video %>.jpg)"></div>
+		<% } else { %>
+			<video class="story__video" autoplay loop muted poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/9332/<%- video %>.jpg">
+				<source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/9332/<%- video %>.mp4" type="video/mp4">
+			</video>
+		<% } %>
+	</article>
+</script>
+
+<script type="text/template" id="story-bar-avatar-template">
+	<div class="story-bar__user" data-story-id="<%- index %>">
+		<div class="story-bar__user-avatar" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9332/<%- user %>.jpg)"></div>
+		<div class="story-bar__user-name"><%- user %></div>
+	</div>
+</script>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/9332/jquery.event.ue.js'></script><script  src="./assets/js/story.js"></script>
+
+</body>
+</html>

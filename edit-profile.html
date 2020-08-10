@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/globals.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/edit-profile.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+
+<body>
+    
+        <a href="profile.html"><i style='font-size:24px; padding-left: 20px; padding-top: 20px;color: white;' class='fas'>&#xf100;</i></a>
+
+    <main id="edit-profile" style=" margin-top: 40px; margin-bottom: 40px;">
+        <div class="edit-profile__container" style="background-color: #333;">
+            <header class="edit-profile__header">
+                <div class="edit-profile__avatar-container">
+                    <img src="images/avatar.jpg" class="edit-profile__avatar" />
+                </div>
+                <h4 class="edit-profile__username">alis_joe</h4>
+            </header>
+            <form action="" class="edit-profile__form">
+                <div class="form__row">
+                    <label for="full-name" class="form__label">Name:</label>
+                    <input id="full-name" type="text" class="form__input" />
+                </div>
+                <div class="form__row">
+                    <label for="user-name" class="form__label">Username:</label>
+                    <input id="user-name" type="text" class="form__input" />
+                </div>
+                <div class="form__row">
+                    <label for="website" class="form__label">Website:</label>
+                    <input id="website" type="url" class="form__input" />
+                </div>
+                <div class="form__row">
+                    <label for="bio" class="form__label">Bio:</label>
+                    <textarea id="bio" type="text" class="form__input"></textarea>
+                </div>
+                <div class="form__row">
+                    <label for="email" class="form__label">Email:</label>
+                    <input id="email" type="email" class="form__input" />
+                </div>
+                <div class="form__row">
+                    <label for="phone" class="form__label">Phone Number:</label>
+                    <input id="phone" type="tel" class="form__input" />
+                </div>
+                <div class="form__row">
+                    <label for="gender" class="form__label">Gender:</label>
+                    <select id="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="cant">Can't remember</option>
+                    </select>
+                </div>
+                <input type="submit" value="Submit" class="btn">
+            </form>
+        </div>
+    </main>
+    
+</body>
+
+</html>
